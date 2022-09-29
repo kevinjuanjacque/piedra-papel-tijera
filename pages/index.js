@@ -85,10 +85,11 @@ export default function Home() {
 
         {OpenModal && (
           <div className="absolute w-full h-full  flex flex-col justify-center items-center bg-[#00000066] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <div className=" w-96  bg-white rounded-lg aspect-square">
-              <div className="flex justify-between px-8 mt-5 mb-5">
+            <div className=" w-full flex flex-col justify-center items-center sm:w-96 h-full sm:h-auto bg-white sm:rounded-lg sm:aspect-square">
+              <div className="flex justify-center w-full  sm:justify-between px-8 mt-5 mb-5">
                 <h1 className=" text-2xl font-extrabold">RULES</h1>
                 <div
+                  className=" hidden sm:flex-1 sm:flex sm:w-full  sm:justify-end items-center"
                   onClick={() => {
                     setOpenModal(false);
                   }}
@@ -101,7 +102,7 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div className=" aspect-square px-10 py-8">
+              <div className=" aspect-square px-10 py-8 w-full ">
                 <Image
                   className=" aspect-square"
                   alt="rule"
@@ -109,6 +110,19 @@ export default function Home() {
                   layout="responsive"
                   width={20}
                   height={20}
+                />
+              </div>
+              <div
+                className="block sm:hidden"
+                onClick={() => {
+                  setOpenModal(false);
+                }}
+              >
+                <Image
+                  alt="close-icon"
+                  src="/assets/icon-close.svg"
+                  width="15px"
+                  height="15px"
                 />
               </div>
             </div>

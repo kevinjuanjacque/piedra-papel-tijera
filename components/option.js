@@ -1,6 +1,6 @@
 import React from 'react';
 
-const OptionGame = ({ border = 3, onCallback }) => {
+const OptionGame = ({ border = 3, onCallback = () => null }) => {
   /**
    * 1 papel
    * 2 tigera
