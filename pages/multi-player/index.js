@@ -57,6 +57,10 @@ const Index = () => {
     socket.on('connect', () => {
       console.log('connected');
     });
+    socket.on('error', (error) => {
+      alert('Ocurrio un error al conectar con socket');
+      console.error(error);
+    });
 
     socket.on('await-rivals-' + id, (msg) => {
       setOnRivals(true);
