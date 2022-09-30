@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import OptionGame from './option';
 
-const Fight = ({ option, random, result = 'YOU LOSE', playAgain }) => {
+const Fight = ({
+  option,
+  random,
+  result = 'YOU LOSE',
+  playAgain,
+  multiplayer = false
+}) => {
   const [EndAnimation, setEndAnimation] = useState(false);
   useEffect(() => {
     setTimeout(() => {
@@ -58,8 +64,7 @@ const Fight = ({ option, random, result = 'YOU LOSE', playAgain }) => {
           className="flex-1 h-64 flex flex-col-reverse sm:flex-col  justify-between opacity-0 transition-opacity duration-500  "
         >
           <h3 className="text-center font-bold my-10 text-xs sm:text-md text-white">
-            {' '}
-            THE HOUSE PICKED{' '}
+            {multiplayer ? 'RIVAL PICKED' : 'THE HOUSE PICKED'}
           </h3>
 
           <OptionGame border={random} />

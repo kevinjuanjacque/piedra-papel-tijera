@@ -5,9 +5,14 @@ export default function Document() {
     <Html>
       <Head>
         <link
-          href="https://fonts.googleapis.com/css?family=Barlow%20Semi%20Condensed&display=optional"
+          href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed&display=optional"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css?family=Barlow+Condensed&display=optional"
+          rel="stylesheet"
+          type="text/css"
+        ></link>
       </Head>
       <body>
         <Main />
