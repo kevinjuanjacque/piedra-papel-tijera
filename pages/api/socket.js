@@ -21,5 +21,9 @@ const SocketHandler = (req, res) => {
   }
   res.end();
 };
-
+export const config = {
+  api: {
+    bodyParser: false
+  }
+};
 export default SocketHandler;
